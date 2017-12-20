@@ -1,5 +1,7 @@
 package it.vendulastore.view;
 
+import it.vendulastore.actionlisteners.LoginListener;
+
 import javax.swing.*;
 
 public class LoginFrame1 extends javax.swing.JFrame {
@@ -45,26 +47,19 @@ public class LoginFrame1 extends javax.swing.JFrame {
         jLabel4.setText("Passoword:");
 
         jTextField1.setText("Inserisci...");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
+        jTextField1.addActionListener(listener);
 
         jPasswordField1.setText("Inserisci...");
 
         jButton1.setBackground(java.awt.Color.pink);
         jButton1.setFont(new java.awt.Font("Goudy Old Style", 0, 14)); // NOI18N
         jButton1.setText("Crea nuovo account");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        jButton1.addActionListener(listener);
 
         jButton2.setBackground(java.awt.Color.pink);
         jButton2.setFont(new java.awt.Font("Goudy Old Style", 0, 18)); // NOI18N
         jButton2.setText("Login");
+        jButton2.addActionListener(listener);
 
         jLabel5.setFont(new java.awt.Font("Goudy Old Style", 0, 14)); // NOI18N
         jLabel5.setText("Non sei ancora registrato?");
@@ -131,23 +126,12 @@ public class LoginFrame1 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
+    /*public static void main(String args[]) {
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -166,13 +150,13 @@ public class LoginFrame1 extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
+        /* Create and display the form
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new LoginFrame1().setVisible(true);
             }
         });
-    }
+           }*/
 
     // Variables declaration - do not modify
     private javax.swing.JButton jButton1;
@@ -194,5 +178,7 @@ public class LoginFrame1 extends javax.swing.JFrame {
         return jPasswordField1;
     }
     // End of variables declaration
+
+    LoginListener listener = new LoginListener(this);
 }
 

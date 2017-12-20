@@ -23,9 +23,6 @@ import java.awt.event.ActionListener;
          public void actionPerformed(ActionEvent e) {
              System.out.println("Evento catturato!");
 
-             if ("RANDOM_MENU_ITEM".equals(e.getActionCommand())) {
-                 JOptionPane.showMessageDialog(null, "Hai premuto la voce di menu random");
-             }
              if (e.getSource() instanceof JButton
                      || e.getSource() instanceof JTextField
                      || e.getSource() instanceof JPasswordField) {
