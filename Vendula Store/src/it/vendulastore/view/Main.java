@@ -59,6 +59,7 @@ public class Main {
         } else
             System.out.println("Il login non è andato a buon fine...");
     } */
-           new LoginFrame1().setVisible(true);
+          // new LoginFrame1().setVisible(true);
+           new FirstFrame().setVisible(true);
     }
 }
